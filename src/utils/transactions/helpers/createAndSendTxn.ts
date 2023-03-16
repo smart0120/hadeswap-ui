@@ -27,6 +27,8 @@ export const createAndSendTxn: CreateAndSendTxn = async ({
 }) => {
   onBeforeApprove?.();
 
+  console.log(txInstructions, additionalSigners)
+
   const { blockhash } = await connection.getLatestBlockhash(commitment);
 
   const lookupTable = (
