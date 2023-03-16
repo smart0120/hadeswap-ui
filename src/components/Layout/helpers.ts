@@ -88,6 +88,7 @@ const createSellNftFromPairIx: CreateIx = async ({
   pair,
   order,
 }) => {
+  console.log(pair, order)
   let ix;
   const isLiquidityProvision = pair.type === 'liquidityProvision';
 

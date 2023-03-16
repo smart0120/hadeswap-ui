@@ -38,6 +38,8 @@ export const createAndSendAllTxns: CreateAndSendAllTxns = async ({
   try {
     onBeforeApprove?.();
 
+    console.log(txnsAndSigners)
+
     const lookupTable = (
       await connection.getAddressLookupTable(
         new web3.PublicKey(process.env.LOOKUP_TABLE_PUBKEY),
